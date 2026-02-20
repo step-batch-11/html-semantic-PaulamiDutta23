@@ -1,7 +1,9 @@
 :root {
-  --background-color: black;
-  --head-foot-font:white;
-  --nav-contact-background: rgb(195, 194, 194);
+  --background-color: #103707;
+  --head-foot-font: white;
+  --highlighter: 88deg 50% 53%;
+  --highlighter: 72deg 88% 62%;
+  --nav-contact-background: hsl(72, 88%, 62%);
 }
 
 * {
@@ -58,8 +60,23 @@ nav>ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  padding: 1em;
   gap: 150px;
+}
+
+nav>ul li {
+  margin-top: 0.1em;
+  padding: 1em;
+}
+
+nav>ul li:hover {
+  background-color: var(--background-color);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+nav>ul li:hover a {
+  color: white;
+
 }
 
 nav>ul a {
@@ -102,7 +119,7 @@ article>header time {
 article>section {
   position: static;
   padding-bottom: 2em;
-  border-bottom: 3px solid var(--nav-contact-background);
+  border-bottom: 3px solid var(--background-color);
   ;
 }
 
@@ -127,7 +144,7 @@ article>section mark {
   font-size: 20px;
   font-weight: 300;
   color: hsl(0deg 0% 0% / 70%);
-  background-color: hsl(0deg 0% 0% / 20%);
+  background-color: hsl(var(--highlighter)/0.2);
   padding: 5px 0px 5px 0px;
 }
 
@@ -150,9 +167,9 @@ figure>figcaption {
   font-size: 18px;
   color: black;
   font-weight: 200;
-  background-color: hsl(0deg 0% 0% / 20%);
+  background-color: hsl(var(--highlighter)/ 20%);
   width: 60%;
-  padding: 5px 0px 5px 0px;
+  padding: 10px 0px 10px 0px;
 }
 
 section>details {
@@ -182,8 +199,8 @@ details[open] summary {
 section>aside {
   width: 20%;
   float: right;
-  background-color: hsl(0deg 0% 0%/20%);
-  box-shadow: inset 5px 0 10px -5px hsl(0deg 0% 0%);
+  background-color: hsl(var(--highlighter)/0.2);
+  box-shadow: inset 5px 0 15px -5px hsl(var(--highlighter));
   position: absolute;
   top: 1250px;
   left: 1140px;
@@ -218,10 +235,11 @@ article>footer>h3 {
   color: black;
 }
 
-article>footer>address, article>footer>address a {
-color: black;
-font-size: 18px;
-font-weight: 300;
+article>footer>address,
+article>footer>address a {
+  color: black;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 footer {
@@ -235,11 +253,11 @@ footer>p {
   line-height: 1.5em;
 }
 
- dialog {
+dialog {
   background-color: hsl(0deg 0% 100%);
   position: fixed;
-  top:50%;
-  left:40%;
+  top: 50%;
+  left: 40%;
   border: 1px solid rgb(199, 198, 198);
   overflow: hidden;
   z-index: 50;
@@ -253,10 +271,10 @@ dialog>p {
 
 dialog>form>button {
   position: absolute;
-  background-color: black;
-  top:0px;
-  right:0px;
+  background-color: var(--background-color);
+  top: 0px;
+  right: 0px;
   padding: 10px;
   color: white;
-  border:none;
+  border: none;
 }

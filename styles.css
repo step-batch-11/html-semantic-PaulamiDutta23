@@ -10,8 +10,8 @@ body {
 
 body>header {
   width: 100%;
-  height: 40vh;
-  background-color: whitesmoke;
+  height: 50vh;
+  background-color: black;
 }
 
 hgroup {
@@ -28,20 +28,23 @@ h1 {
   font-size: 80px;
   font-weight: 800;
   font-family: serif;
+  color: white;
 }
 
 hgroup>p {
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 400;
+  color: white;
   margin: 10px;
   margin-bottom: 5px;
 }
 
 nav {
-  background-color: hsl(0deg 0% 0% / 20%);
+  background-color: rgb(195, 194, 194);
   width: 100%;
   position: sticky;
   top: 0px;
+  z-index: 20;
 }
 
 nav>ul {
@@ -55,6 +58,161 @@ nav>ul {
 
 nav>ul a {
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   color: black;
+}
+
+main {
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+article>header h2 {
+  font-size: 45px;
+  font-weight: 500;
+  margin-bottom: 0.3em;
+}
+
+article>header p,
+article>header time {
+  font-size: 18px;
+  font-weight: 300;
+  color: hsl(0deg 0% 0% / 60%);
+}
+
+article>section {
+  /* width:100%;
+  display: flex;
+  flex-direction: column; */
+  position: static;
+  padding-bottom: 2em;
+  border-bottom: 2px solid hsl(0deg 0% 0% / 20%);
+  ;
+}
+
+article>section h3 {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 0.8em;
+}
+
+article>section p {
+  font-size: 20px;
+  font-weight: 300;
+  color: hsl(0deg 0% 0% / 70%);
+  line-height: 2em;
+}
+
+data {
+  font-weight: 500;
+}
+
+article>section mark {
+  font-size: 20px;
+  font-weight: 300;
+  color: hsl(0deg 0% 0% / 70%);
+  background-color: hsl(0deg 0% 0% / 20%);
+  padding: 5px 0px 5px 0px;
+}
+
+article>section>figure {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+figure>img {
+  width: 60%;
+  object-fit: contain;
+}
+
+figure>figcaption {
+  text-align: left;
+  font: italic smaller sans-serif;
+  font-size: 18px;
+  color: black;
+  font-weight: 200;
+  background-color: hsl(0deg 0% 0% / 20%);
+  width: 60%;
+  padding: 5px 0px 5px 0px;
+}
+
+section>details {
+  width: 60%;
+  border: 1px solid hsl(0deg 0% 0% / 20%);
+  border-radius: 5px;
+  padding: 10px 0px 10px 10px;
+}
+
+summary {
+  font-size: 20px;
+  font-weight: 300;
+  color: hsl(0deg 0% 0%/60%);
+}
+
+details[open] {
+  padding: 5px;
+}
+
+details[open] summary {
+  font-weight: 300;
+  color: hsl(0deg 0% 0%);
+  padding-bottom: 10px;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+section>aside {
+  width: 20%;
+  float: right;
+  background-color: hsl(0deg 0% 0% / 10%);
+  box-shadow: inset 5px 0 10px -5px hsl(0deg 0% 0%);
+  position: absolute;
+  top: 1250px;
+  left: 1140px;
+  padding: 10px;
+}
+
+section>aside>h3 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+aside>ul {
+  list-style: none;
+}
+
+aside>ul a {
+  text-decoration: none;
+  font-size: 18px;
+  color: hsl(0deg 0% 0% / 70%);
+}
+
+article>footer {
+  padding: 10px 0px 10px 10px;
+  background-color: black;
+}
+
+article>footer>h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0.8em;
+  color: white;
+}
+
+article>footer>address, article>footer>address a {
+color: white;
+font-size: 18px;
+font-weight: 300;
 }
